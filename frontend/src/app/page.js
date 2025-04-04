@@ -1,14 +1,16 @@
+import Link from 'next/link'
+
 export default function Home() {
     return (
         <div className="bg-[url(/mygai.png)] bg-no-repeat bg-cover container parent">
             <div className="container">
-                <img className="img img1" src="yellow.png" />
-                <img className="img img2" src="red.png" />
+                <Link className="img img1" href="/feed"><img src="/yellow.png"/></Link>
+                <Link className="img img2" href="/vet"><img src="/red.png" /></Link>
             </div>
-            <img className="img img5" src="blue.png" />
+            <Link className="img img5" href="/register"><img src="/blue.png" /></Link>
             <div className="container bottom">
-                <img className="img img3" src="brown.png" />
-                <img className="img img4" src="milking.png" />
+                <Link className="img img3" href="/breed"><img src="/brown.png" /></Link>
+                <Link className="img img4" href="/milk"><img src="/milking.png" /></Link>
             </div>
         </div>
     );
