@@ -1,14 +1,14 @@
 export default function Home() {
     return (
-        <div class="container parent">
-            <div class="container">
-                <img class="img img1" src="yellow.png" />
-                <img class="img img2" src="red.png" />
+        <div className="bg-[url(/mygai.png)] bg-no-repeat bg-cover container parent">
+            <div className="container">
+                <img className="img img1" src="yellow.png" />
+                <img className="img img2" src="red.png" />
             </div>
-            <img class="img img5" src="blue.png" />
-            <div class="container bottom">
-                <img class="img img3" src="brown.png" />
-                <img class="img img4" src="milking.png" />
+            <img className="img img5" src="blue.png" />
+            <div className="container bottom">
+                <img className="img img3" src="brown.png" />
+                <img className="img img4" src="milking.png" />
             </div>
         </div>
     );
