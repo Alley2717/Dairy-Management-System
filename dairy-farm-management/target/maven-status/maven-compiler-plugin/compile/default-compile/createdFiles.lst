@@ -1,0 +1,16 @@
+com/example/dairyfarm/model/HealthTracking.class
+com/example/dairyfarm/service/TrackingFactory.class
+com/example/dairyfarm/model/FeedInventory.class
+com/example/dairyfarm/model/BreedingAnalytics.class
+com/example/dairyfarm/service/AnimalService.class
+com/example/dairyfarm/controller/AnimalController.class
+com/example/dairyfarm/model/MilkProductionTracking.class
+com/example/dairyfarm/model/Animal.class
+com/example/dairyfarm/repository/AnimalRepository.class
+com/example/dairyfarm/DairyFarmApplication.class
+com/example/dairyfarm/controller/FarmController.class
+com/example/dairyfarm/model/FeedTracking.class
+com/example/dairyfarm/model/Tracking.class
+com/example/dairyfarm/service/TrackingService.class
+com/example/dairyfarm/controller/PageController.class
+com/example/dairyfarm/model/AnimalPrototype.class

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Animal</title>
+</head>
+<body>
+    <h2>Add New Animal</h2>
+    <form method="POST" action="/animals/add" enctype="application/json" onsubmit="return submitForm(event)">
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id"><br>
+
+        <label for="breed">Breed:</label><br>
+        <input type="text" id="breed" name="breed"><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br>
+
+        <label for="healthStatus">Health Status:</label><br>
+        <input type="text" id="healthStatus" name="healthStatus"><br><br>
+
+        <input type="submit" value="Add Animal">
+    </form>
+
+    <p id="response"></p>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const animal = {
+                id: document.getElementById('id').value,
+                breed: document.getElementById('breed').value,
+                age: document.getElementById('age').value,
+                healthStatus: document.getElementById('healthStatus').value
+            };
+
+            fetch('/animals/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(animal)
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('response').textContent = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+            return false;
+        }
+    </script>
+</body>
+</html>
