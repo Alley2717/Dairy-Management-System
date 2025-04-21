@@ -13,8 +13,6 @@ public class TrackingFactory {
                 return new FeedTracking();
             case "health":
                 return new HealthTracking();
-            case "breeding":
-                return new BreedingAnalytics();
             default:
                 throw new IllegalArgumentException("Unknown tracking type: " + type);
         }

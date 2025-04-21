@@ -4,7 +4,6 @@ package com.example.dairyfarm.service;
 import com.example.dairyfarm.model.Tracking;
 import com.example.dairyfarm.model.FeedTracking;
 import com.example.dairyfarm.model.MilkProductionTracking;
-import com.example.dairyfarm.model.BreedingAnalytics;
 import com.example.dairyfarm.model.HealthTracking;
 import org.springframework.stereotype.Service;
 
