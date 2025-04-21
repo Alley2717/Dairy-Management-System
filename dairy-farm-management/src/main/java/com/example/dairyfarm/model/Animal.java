@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 public class Animal implements AnimalPrototype {
 
     @Id
-    private String id;  // ✅ NOW it's a proper primary key
+    private String id;
 
     private String breed;
     private int age;

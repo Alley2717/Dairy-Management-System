@@ -1,4 +1,3 @@
-// DairyFarmApplication.java - dummy content for now
 package com.example.dairyfarm;
 
 import org.springframework.boot.SpringApplication;

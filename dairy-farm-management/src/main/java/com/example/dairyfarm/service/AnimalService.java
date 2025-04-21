@@ -40,14 +40,13 @@ public class AnimalService {
     }
     public void updateAnimal(String id, Animal updatedAnimal) {
         Animal existing = animalRepository.findById(id).orElseThrow();
-        existing.setName(updatedAnimal.getName());
         existing.setBreed(updatedAnimal.getBreed());
         existing.setAge(updatedAnimal.getAge());
         animalRepository.save(existing);
     }
-    
+
     public void deleteAnimal(String id) {
         animalRepository.deleteById(id);
     }
-    
+
 }
