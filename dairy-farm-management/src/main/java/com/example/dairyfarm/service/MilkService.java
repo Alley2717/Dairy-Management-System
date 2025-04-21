@@ -18,7 +18,7 @@ public class MilkService {
 
     public void addMilkRecord(String animalId, MilkRecord record) {
         Animal animal = animalRepo.findById(animalId).orElseThrow();
-        record.setAnimal(animal);
+        //record.setAnimal(animal);
         milkRepo.save(record);
     }
 }
