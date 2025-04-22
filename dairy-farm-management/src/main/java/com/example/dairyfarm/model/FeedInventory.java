@@ -1,13 +1,38 @@
-// FeedInventory.java - dummy content for now
 package com.example.dairyfarm.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class FeedInventory {
 
+    @Id
+    private Long id;
     private String feedType;
-    private double stockLevel;
-    private String lastUpdated;
+    private Double totalStock;
 
-    public FeedInventory() {}
+    // Getters and setters
+    public Long getId() {
+        return id;
+    }
 
-    // Getters and Setters
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getFeedType() {
+        return feedType;
+    }
+
+    public void setFeedType(String feedType) {
+        this.feedType = feedType;
+    }
+
+    public Double getTotalStock() {
+        return totalStock;
+    }
+
+    public void setTotalStock(Double totalStock) {
+        this.totalStock = totalStock;
+    }
 }
