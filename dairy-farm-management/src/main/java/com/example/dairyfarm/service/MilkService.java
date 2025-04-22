@@ -16,9 +16,10 @@ public class MilkService {
     @Autowired
     private AnimalRepository animalRepo;
 
-    public void addMilkRecord(String animalId, MilkRecord record) {
+    public void addMilkRecord(Long animalId, MilkRecord record) {
         Animal animal = animalRepo.findById(animalId).orElseThrow();
         //record.setAnimal(animal);
         milkRepo.save(record);
     }
 }
+

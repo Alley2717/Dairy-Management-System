@@ -1,43 +1,89 @@
 package com.example.dairyfarm.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import java.time.LocalDate;
 
 @Entity
-public class Animal implements AnimalPrototype {
+@Table(name = "animals")
+public class Animal {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
+    private String animalId;
+    private String name;
+    private LocalDate dob;
     private String breed;
-    private int age;
-    private String healthStatus;
+    private String gender;
+    private String notes;
 
-    public Animal() {}
+    public Animal() {
+    }
 
-    public Animal(String id, String breed, int age, String healthStatus) {
-        this.id = id;
+    public Animal(String animalId, String name, LocalDate dob, String breed, String gender, String notes) {
+        this.animalId = animalId;
+        this.name = name;
+        this.dob = dob;
         this.breed = breed;
-        this.age = age;
-        this.healthStatus = healthStatus;
+        this.gender = gender;
+        this.notes = notes;
     }
 
     // Getters and Setters
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public Long getId() {
+        return id;
+    }
 
-    public String getBreed() { return breed; }
-    public void setBreed(String breed) { this.breed = breed; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public int getAge() { return age; }
-    public void setAge(int age) { this.age = age; }
+    public String getAnimalId() {
+        return animalId;
+    }
 
-    public String getHealthStatus() { return healthStatus; }
-    public void setHealthStatus(String healthStatus) { this.healthStatus = healthStatus; }
+    public void setAnimalId(String animalId) {
+        this.animalId = animalId;
+    }
 
-    // Prototype pattern method
-    @Override
-    public Animal clone() {
-        return new Animal(this.id + "_clone", this.breed, this.age, this.healthStatus);
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 }
