@@ -31,7 +31,7 @@ A modular, Spring Boot–based web application designed to streamline dairy farm
 
 - **Backend:** Java 17, Spring Boot, Spring Security, Spring Data JPA
 - **Database:** MySQL
-- **Frontend:** Thymeleaf (or optional React integration)
+- **Frontend:** HTML/CSS
 - **Architecture:** MVC pattern with layered structure (controller, service, repository)
 - **Design Patterns:** Factory Pattern for user creation; Prototype Pattern for animal cloning
 
